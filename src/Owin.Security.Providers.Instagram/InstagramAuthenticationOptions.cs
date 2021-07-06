@@ -71,7 +71,7 @@ namespace Owin.Security.Providers.Instagram
         /// <summary>
         /// A list of permissions to request.
         /// </summary>
-        public IList<string> Scope { get; private set; }
+        public IList<string> Scope { get; set; }
 
         /// <summary>
         ///     Gets or sets the name of another authentication middleware which will be responsible for actually issuing a user
@@ -95,7 +95,7 @@ namespace Owin.Security.Providers.Instagram
             AuthenticationMode = AuthenticationMode.Passive;
             Scope = new List<string>
             {
-                "basic"
+                "user_profile"
             };
             BackchannelTimeout = TimeSpan.FromSeconds(60);
         }
